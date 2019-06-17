@@ -1,0 +1,16 @@
+Install vs2105 x140 toolset if using vstudio 2017
+
+Make solution target v141 in project properties -> general
+	& turn off treat warning as error 
+
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
+
+Quote's needed or it fails:
+nmake BOOSTPATH="C:\Users\v0t009e.HOMEOFFICE\Downloads\boost_1_70_0\" BOOSTREGEXLIBPATH="C:\Users\v0t009e.HOMEOFFICE\Desktop\boostregexLib\x64\" -f scintilla.mak
+
+Use debug mode to avoid certificate checking:
+https://notepad-plus-plus.org/community/topic/14054/certificate-required-for-building-notepad/5
+
+
+Copy SciLexer.dll from scintilla\bin\ to the same directory as notepad++.exe
+Such as: C:\Users\v0t009e.HOMEOFFICE\Desktop\GitHub\notepad-plus-plus\PowerEditor\visual.net\x64\Unicode Debug

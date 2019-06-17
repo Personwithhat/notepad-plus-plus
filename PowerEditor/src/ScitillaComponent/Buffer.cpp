@@ -508,6 +508,9 @@ void FileManager::init(Notepad_plus * pNotepadPlus, ScintillaEditView * pscratch
 	_pscratchTilla->execute(SCI_SETUNDOCOLLECTION, false);	//dont store any undo information
 	_scratchDocDefault = (Document)_pscratchTilla->execute(SCI_GETDOCPOINTER);
 	_pscratchTilla->execute(SCI_ADDREFDOCUMENT, 0, _scratchDocDefault);
+
+	// Need initialization check otherwise would try to check buffer before NotepadPlusPlus is ready.
+	ready = true;
 }
 
 void FileManager::checkFilesystemChanges(bool bCheckOnlyCurrentBuffer)

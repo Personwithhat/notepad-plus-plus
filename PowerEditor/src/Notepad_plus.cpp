@@ -3325,7 +3325,8 @@ void Notepad_plus::dropFiles(HDROP hdrop)
 void Notepad_plus::checkModifiedDocument(bool bCheckOnlyCurrentBuffer)
 {
 	//this will trigger buffer updates. If the status changes, Notepad++ will be informed and can do its magic
-	MainFileManager->checkFilesystemChanges(bCheckOnlyCurrentBuffer);
+	if (MainFileManager->ready)
+		MainFileManager->checkFilesystemChanges(bCheckOnlyCurrentBuffer);
 }
 
 void Notepad_plus::getMainClientRect(RECT &rc) const
