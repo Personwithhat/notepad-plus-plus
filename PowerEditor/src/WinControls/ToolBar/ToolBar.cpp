@@ -176,6 +176,13 @@ bool ToolBar::init( HINSTANCE hInst, HWND hPere, toolBarStatusType type, ToolBar
 	return true;
 }
 
+LRESULT ToolBar::runProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
+{
+	switch (Message)
+	{
+	}
+}
+
 void ToolBar::destroy()
 {
 	if (_pRebar)

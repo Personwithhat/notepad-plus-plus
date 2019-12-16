@@ -42,8 +42,8 @@ const bool dirDown = false;
 
 #define LINKTRIGGERED WM_USER+555
 
-#define BCKGRD_COLOR (RGB(255,102,102))
-#define TXT_COLOR    (RGB(255,255,255))
+#define BCKGRD_COLOR (RGB(56,226,221))
+#define TXT_COLOR    (RGB(56,226,221))
 
 #define generic_strtol wcstol
 #define generic_strncpy wcsncpy
